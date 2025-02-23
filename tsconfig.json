@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",                 // Soporta las últimas características de JS
+    "module": "commonjs",               // Módulo compatible con Node.js
+    "rootDir": "src",                   // Directorio raíz del código fuente
+    "outDir": "dist",                   // Carpeta de salida de archivos compilados
+    "strict": true,                      // Activa estrictamente las reglas de TS
+    "esModuleInterop": true,             // Permite importar módulos de ES6
+    "forceConsistentCasingInFileNames": true, // Evita errores en mayúsculas/minúsculas
+    "skipLibCheck": true,                // Evita comprobaciones en archivos de librerías
+    "resolveJsonModule": true,           // Permite importar archivos JSON
+    "noImplicitAny": true,               // Evita usar `any` implícito
+    "moduleResolution": "node",          // Resolución de módulos para Node.js
+    "allowSyntheticDefaultImports": true, // Permite importar módulos sin `default`
+    "baseUrl": ".",
+    "paths": {
+      "@services/*": ["./src/modules/*/services"],
+    },
+  },
+  "include": ["src"],                    // Directorios a incluir en la compilación
+  "exclude": ["node_modules", "dist"]    // Evita compilar dependencias y archivos de salida
+}
